@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    background-color: black;
     color: white;
+}
+
+body {
+    background-color: black;
 }
 
 :root {
@@ -37,7 +40,7 @@ header {
 nav {
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 98px;
+    padding-bottom: 40px;
 }
 
 .nav-logo {
@@ -76,6 +79,7 @@ nav ul li a {
 /* Banner-Section Styles */
 #banner-section {
     justify-content: space-between;
+    align-items: center;
 }
 
 .banner-content {
@@ -99,6 +103,7 @@ nav ul li a {
     gap: 16px;
 }
 
+
 .banner-btn {
     padding: 16px 40px;
     text-decoration: none;
@@ -114,12 +119,94 @@ nav ul li a {
     border: 1px solid white;
 }
 
+.fa-play {
+    font-size: 1.5 rem;
+    position: absolute;
+    bottom: 350px;
+    left: -100px;
+}
+
+.banner-right img {
+    width: 85%;
+    vertical-align: middle;
+    object-fit: contain;
+
+}
+
+.banner-right {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.banner-badge-1 {
+    position: absolute;
+    background-color: rgba(48, 48, 48, 0.54);
+    border-radius: 12px;
+    border: 1px solid var(--discription-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 80px;
+    left: -40px;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+
+.badge-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--nav-text-color);
+}
+
+
+.badge-content h4 {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.badge-content p {
+    font-size: 1.25rem;
+    color: var(--discription-color);
+}
+
+.banner-badge-2 {
+    position: absolute;
+    top: 180px;
+    right: -55px;
+    position: absolute;
+    background-color: rgba(48, 48, 48, 0.54);
+    border-radius: 12px;
+    border: 1px solid var(--discription-color);
+    padding: 20px 24px;
+    gap: 20px;
+    max-width: 295px;
+}
+
+.banner-badge-2 h4 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.banner-badge-2 p {
+    font-size: 0.9rem;
+    color: var(--discription-color);
+}
 
 
 
 /* Responsive Design */
-@media screen and (max-width:576px) {
+@media screen and (max-width:480px) {
     .nav-links li a {
+        display: none;
+    }
+
+    .nav-links {
         display: none;
     }
 
@@ -127,4 +214,154 @@ nav ul li a {
         display: inline;
         font-size: 1.8rem;
     }
+
+    #banner-section {
+        flex-direction: column;
+    }
+
+    .banner-heading {
+        font-size: 2.6rem;
+        padding-bottom: 28px;
+    }
+
+    .banner-btn {
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
+
+    .banner-content {
+        margin-bottom: 80px;
+    }
+
+    .banner-right {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-right img {
+        width: 300px;
+    }
+
+    .play-btn {
+        display: none;
+    }
+
+    .badge-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .banner-badge-1 {
+        bottom: 180px;
+        left: -60px;
+        padding: 10px 10px;
+        gap: 10px;
+    }
+
+    .badge-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 900;
+    }
+
+    .badge-content p {
+        font-size: 0.8rem;
+        color: var(--discription-color);
+    }
+
+    .banner-badge-2 {
+        top: 20px;
+        right: -50px;
+        padding: 10px 14px;
+
+    }
+
+    .banner-badge-2 h4 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+        font-weight: 900;
+    }
+
+    .banner-badge-2 p {
+        font-size: 0.8rem;
+        color: var(--discription-color);
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .nav-links li a {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-bar {
+        display: inline;
+        font-size: 1.8rem;
+    }
+
+    #banner-section {
+        flex-direction: column;
+    }
+
+    .banner-content {
+        margin-bottom: 80px;
+    }
+
+    .banner-right {
+        width: 60%;
+    }
+
+    .fa-play {
+        bottom: 350px;
+        left: 0;
+    }
+
+    .banner-badge-1 {
+        bottom: 40px;
+        left: -80px;
+    }
+
+    .banner-badge-2 {
+        top: 140px;
+        right: -95px;
+    }
+
+
+
+}
+
+
+@media screen and (min-width:749px) and (max-width:1124px) {
+    #banner-section {
+        flex-direction: column;
+    }
+
+    .banner-content {
+        margin-bottom: 80px;
+    }
+
+    .banner-right img{
+        width: 400px;
+    }
+
+    .banner-badge-1 {
+        bottom: 60px;
+        left: -80px;
+    }
+
+    .banner-badge-2 {
+        top: 140px;
+        right: -95px;
+    }
+
+    .fa-play {
+        bottom: 350px;
+        left: 0;
+    }
+
 }
